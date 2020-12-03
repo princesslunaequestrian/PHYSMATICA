@@ -1,0 +1,104 @@
+.working-area {
+    position: relative;
+    margin: 15px;
+}
+
+.interface {
+    width: 375px;
+    height: 50px;
+    margin: 15px;
+    display: flex
+
+}
+
+.mass {
+    width: 115px;
+    margin: 0px;
+    height: 50px;
+}
+.mass-text{
+    font-size: 40px;
+    font-family: sans-serif;
+    position: relative;
+    top: 10px
+}
+.mass-input {
+    width: 60px;
+    height: 40px;
+    padding: 0px;
+    border-style: inset;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: brown;
+}
+.stif {
+    width: 115px;
+    margin: 0px;
+    height: 50px;
+}
+.stif-text{
+    font-size: 40px;
+    font-family: sans-serif;
+    position: relative;
+    top: 10px
+}
+.stif-input {
+    width: 60px;
+    height: 40px;
+    padding: 0px;
+    border-style: inset;
+    border-color: brown;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.start {
+    width: 115px;
+    margin: 0px;
+    height: 50px;
+}
+.start-button {
+    width: 100px;
+    height: 45px;
+    position: relative;
+    top: 7px;
+    border-style: inset;
+    border-color: brown;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.stand-top {
+    height: 110px;
+
+}
+
+.pendulum-stand {
+    margin: 15px;
+    width: 375px;
+    height: 730px;
+    position: relative;
+}
+
+.stand {
+    position: absolute;
+}
+
+.moving-area {
+    width: 100px;
+    position: absolute;
+    left: 135px
+}
+
+.spring {
+    display: block;
+
+}
+
+.ball-img {
+    position: relative;
+    left: 20px
+}

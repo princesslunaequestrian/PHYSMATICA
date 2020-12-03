@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+
+  <Head>
+    <link rel="stylesheet" href="CSS/style.css">
+
+  </Head>
+
+  <body>
+
+    <div class='canvas'>
+
+      <div class='working-area'>
+
+        <div class='interface'>
+
+          <div class='mass' id='mass'>
+      
+            <span class='mass-text' id='mass-text'>M</span>
+            <input class='mass-input' id='mass-input' type='number' value='1'>
+    
+          </div>
+    
+          <div class='stif' id='stif'>
+            
+            <span class='stif-text' id='stif-text'>K</span>
+            <input class='stif-input' id='stif-input' type='number' value='1'>
+    
+          </div>
+    
+          <div class='start' id='start'>
+    
+            <button class='start-button' id='start-button' onclick="onClick">
+              СТАРТ
+            </button>
+    
+          </div>
+
+        </div>
+
+        <div class='pendulum-stand'>
+
+          <img id='stand' class='stand' src='assets/stand.png' width=375 height=730/>
+
+          <div class='stand-top'>
+
+          </div>
+
+          <div class='moving-area'>
+
+            <div class='spring' id='spring' height=280>
+
+              <image id='spring-img' class='spring-img' src='assets/spring.png' width=100 height=280/>
+
+            </div>
+
+            <div class='ball'>
+
+              <image id='ball-img' class='ball-img' src='assets/ball.png' width=60 height=100/>
+
+            </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+    <script src="JS/pendulum.js"></script>
+
+</body>
+
+
