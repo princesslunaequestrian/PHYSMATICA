@@ -6,7 +6,7 @@
 .interface {
     width: 375px;
     height: 50px;
-    margin: 15px;
+    margin: 0px;
     display: flex
 
 }
@@ -71,34 +71,6 @@
     border-radius: 10px;
 }
 
-.stand-top {
-    height: 110px;
-
-}
-
-.pendulum-stand {
-    margin: 15px;
-    width: 375px;
-    height: 730px;
-    position: relative;
-}
-
-.stand {
-    position: absolute;
-}
-
-.moving-area {
-    width: 100px;
-    position: absolute;
-    left: 135px
-}
-
-.spring {
-    display: block;
-
-}
-
-.ball-img {
-    position: relative;
-    left: 20px
+.canvas {
+    margin-top: 15px;
 }
