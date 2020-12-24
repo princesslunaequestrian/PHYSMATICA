@@ -11,16 +11,18 @@ class Interface extends React.Component
 
         super(props);
 
-        this.onInterfaceUpdate = this.onInterfaceUpdate.bind(this);
+        this.onParametersUpdate = this.onParametersUpdate.bind(this);
+        this.onPush = this.onPush.bind(this);
+        this.onRelease = this.onRelease.bind(this);
 
     }
 
     componentDidUpdate()
     {
-        console.log('interface updated');
+
     }
 
-    onInterfaceUpdate(e)
+    onParametersUpdate(e)
     {
         switch (e.target.className)
         {
@@ -36,14 +38,20 @@ class Interface extends React.Component
                 this.props.handleInterfaceUpdate("startstop", 0);
                 break;
 
-            case "reset":
-                this.props.handleInterfaceUpdate("reset", 0);
-                break;
-
             default:
                 break;
         }
 
+    }
+
+    onPush()
+    {
+        this.props.handleInterfaceUpdate("push", 1);
+    }
+
+    onRelease()
+    {
+        this.props.handleInterfaceUpdate("push", 0);
     }
 
     render()
@@ -57,7 +65,7 @@ class Interface extends React.Component
                     className="massInput"
                     type="number"
                     style={styles.inp}
-                    onChange={this.onInterfaceUpdate}
+                    onChange={this.onParametersUpdate}
                     value={this.props.params.mass.toString()}
                     />
 
@@ -66,13 +74,13 @@ class Interface extends React.Component
                     className="stifInput"
                     type="number"
                     style={styles.inp}
-                    onChange={this.onInterfaceUpdate}
+                    onChange={this.onParametersUpdate}
                     value={this.props.params.stif.toString()}
                     />
 
                 <button
                     className="startstop"
-                    onClick={this.onInterfaceUpdate}
+                    onClick={this.onParametersUpdate}
                     style={styles.btn}>
                     
                     {this.props.params.animated? 'СТОП' : 'СТАРТ'}
@@ -80,12 +88,15 @@ class Interface extends React.Component
                 </button>
 
                 <button
-                    className="reset"
-                    onClick={this.onInterfaceUpdate}
+                    className="push"
+                    onMouseDown={this.onPush}
+                    onMouseUp={this.onRelease}
                     style={styles.btn}
-                    hidden={this.props.params.reset? true : false}>
-                    СБРОСИТЬ
+                >
+                    ПОДНЯТЬ
                 </button>
+
+
 
             </li>
             </div>

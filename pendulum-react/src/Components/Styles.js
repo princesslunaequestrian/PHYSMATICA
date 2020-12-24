@@ -8,7 +8,7 @@ const styles =
     inp: {
         display: 'block',
         margin: '0.5rem',
-        width: '20px'
+        width: '40px'
     },
 
     div: {
@@ -38,9 +38,7 @@ const styles =
 
     canv: {
         margin: '0.5rem',
-        display: 'flex',
-        width: '600px',
-        height: '600px'
+        display: 'flex'
     }
 
 }

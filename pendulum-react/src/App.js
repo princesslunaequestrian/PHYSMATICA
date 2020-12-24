@@ -11,21 +11,13 @@ class App extends React.Component
 	{
 
 		super(props);
-
-		this.initialState = 
-        {
-            animated: false,
-            mass: 1,
-			stif: 1,
-			reset: true
-		};
 		
 		this.state = 
 		{
             animated: false,
             mass: 1,
 			stif: 1,
-			reset: true
+			pushed: false
 		};
 
 		this.handleInterfaceUpdate = this.handleInterfaceUpdate.bind(this);
@@ -45,21 +37,25 @@ class App extends React.Component
 				this.setState((state) => ({stif: value}));
 				break;
 
-			case "button":
+			case "startstop":
 				this.setState((state) => ({animated: !state.animated}));
 				break;
 
-			case "reset":
-				this.setState((state) => ({reset: true}));
-				
+			case "push":
+				value === 1
+				? this.setState(() => ({pushed: true}))
+				: this.setState(() => ({pushed: false}));
 				break;
 
 			default:
 				break;
 		}
-
-		console.log(this.state);
 		
+	}
+
+	componentDidUpdate()
+	{
+		console.log(this.state);
 	}
 
 	render()
